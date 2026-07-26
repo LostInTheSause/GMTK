@@ -1,0 +1,13 @@
+res://civilian.tscn
+res://player.gd
+res://bomber.tscn
+res://player.tscn
+res://blood_remaing.gd
+res://Enemy_class.gd
+res://comander.tscn
+res://civilian.gd
+res://node_2d.tscn
+res://bomber.gd
+res://gun_man.tscn
+res://cemetary.tscn
+res://enemy_spawner.gd

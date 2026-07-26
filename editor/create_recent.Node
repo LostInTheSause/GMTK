@@ -1,0 +1,12 @@
+AudioStreamPlayer2D
+Parallax2D
+Camera2D
+TileMapLayer
+TileMap
+TextureProgressBar
+Node
+CollisionShape2D
+Area2D
+AnimatedSprite2D
+RayCast2D
+AnimationPlayer
