@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://4pqund3nukl7"]
+
+[ext_resource type="Texture2D" uid="uid://4q335xxs2p" path="res://icon.svg" id="1_0e48y"]
+[ext_resource type="PackedScene" uid="uid://ckudr8chj1kgo" path="res://player.tscn" id="1_wtcfe"]
+[ext_resource type="PackedScene" uid="uid://dmtfxvs1wmssr" path="res://civilian.tscn" id="2_epypp"]
+[ext_resource type="PackedScene" uid="uid://guhkbcmt0qkx" path="res://bomber.tscn" id="3_0hol4"]
+[ext_resource type="PackedScene" uid="uid://dbjufh7gswnxh" path="res://gun_man.tscn" id="5_q6r6c"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_y32ns"]
+distance = -427.0
+
+[node name="Node2D" type="Node2D" unique_id=1273863214]
+
+[node name="RigidBody2D" type="RigidBody2D" parent="." unique_id=1025365313]
+gravity_scale = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D" unique_id=342790111]
+shape = SubResource("WorldBoundaryShape2D_y32ns")
+
+[node name="Icon" type="Sprite2D" parent="RigidBody2D/CollisionShape2D" unique_id=5488557]
+position = Vector2(597.5, 477)
+scale = Vector2(10.5234375, 1)
+texture = ExtResource("1_0e48y")
+
+[node name="player" parent="." unique_id=239661232 instance=ExtResource("1_wtcfe")]
+position = Vector2(-7, 290)
+
+[node name="Camera2D" type="Camera2D" parent="player" unique_id=1962715807]
+
+[node name="civilian" parent="." unique_id=1224281967 instance=ExtResource("2_epypp")]
+position = Vector2(481, 359.00003)
+scale = Vector2(1.9, 1.9)
+
+[node name="bomber" parent="." unique_id=476961082 instance=ExtResource("3_0hol4")]
+position = Vector2(-425, 330)
+scale = Vector2(2.79, 2.79)
+
+[node name="gun_man" parent="." unique_id=586780474 instance=ExtResource("5_q6r6c")]
+position = Vector2(876, 381)
+
+[node name="ui" type="Node" parent="." unique_id=419191755]
+
+[node name="bloodbar" type="TextureProgressBar" parent="ui" unique_id=572155816]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 40.0
+grow_horizontal = 2
